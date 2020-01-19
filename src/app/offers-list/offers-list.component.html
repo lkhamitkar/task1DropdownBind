@@ -1,0 +1,25 @@
+
+
+<div>
+    Select Offer:
+    <select [(ngModel)]="OfferHeader.name" (ngModelChange)="SearchOffer(OfferHeader.name)">  
+        <option *ngFor="let prod of Offer   Header">{{prod.name}} </option>  
+    </select> 
+    <div *ngIf="OfferHeader.name">  
+        <h5>You have selected: {{OfferHeader.name}} Offer </h5>  
+    </div>  
+                      
+     
+    <h4>Offer Details:</h4>  
+<table class="TFtable">  
+    <tr >  
+        <th>Name</th> <th>Store</th> <th>Price</th> <th>Model</th>  
+    </tr>  
+    <tr *ngFor="let Prod of OfferDetails">  
+        <td>{{Prod.title}}</td>  
+        <td>{{Prod.store}}</td>  
+        <td>{{Prod.price}}</td>   
+    </tr>  
+      
+</table> 
+</div>
